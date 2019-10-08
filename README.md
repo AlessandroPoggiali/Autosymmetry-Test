@@ -1,6 +1,6 @@
 # Autosymmetry-Test
 
-This project provide the Autosymmetry Test of a given Boolean function.
+This project provides the Autosymmetry Test of a given Boolean function.
 
 ## Installation
 
