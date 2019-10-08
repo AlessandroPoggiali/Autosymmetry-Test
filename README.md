@@ -1,2 +1,0 @@
-# Autosymmetry-Test
-# Autosymmetry-Test
