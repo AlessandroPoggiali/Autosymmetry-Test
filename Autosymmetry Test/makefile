@@ -12,7 +12,7 @@ OBJECTS		= PLAparser.o PLAtoVerilog.o equations.o
 
 INCLUDE_FILES   = main.h PLAparser.h PLAtoVerilog.h equations.h\
 
-.PHONY: all clean cleanall 
+.PHONY: all clean cleanall install
 .SUFFIXES: .c .h
 
 %: %.c
@@ -42,7 +42,11 @@ clean		:
 
 cleanall	: clean
 	\rm -f *.o *~ libautosymtest.a dot/* reductionEqns/* restrictions/* tmp.pla reverse.pla bench/DivisiInDifficolta/facili/*.v 
-
+install:
+	mkdir dot 
+	mkdir reductionEqns
+	mkdir restrictions
+	
 
 
 
