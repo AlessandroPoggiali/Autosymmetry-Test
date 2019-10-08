@@ -8,6 +8,13 @@ You must have CUDD (https://github.com/ivmai/cudd) library installed on your sys
 
 You must also download the ABC-Berkeley (https://github.com/berkeley-abc/abc) library and copy the file 'libabc.a' in the project main folder.
 
+Type the command
+
+```bash
+make install
+```
+to set up the project configuration. 
+
 ## Compile
 
 Use the Makefile to compile the project.
