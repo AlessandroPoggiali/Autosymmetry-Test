@@ -4,7 +4,9 @@ This project provide the Autosymmetry Test of a given Boolean function.
 
 ## Installation
 
-You must have CUDD (https://github.com/ivmai/cudd) and ABC-Berkeley (https://github.com/berkeley-abc/abc) libraries installed on your system.
+You must have CUDD (https://github.com/ivmai/cudd) library installed on your system.
+
+You must also download the ABC-Berkeley (https://github.com/berkeley-abc/abc) library and copy the file 'libabc.a' in the project main folder.
 
 ## Compile
 
