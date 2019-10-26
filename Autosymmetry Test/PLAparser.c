@@ -189,6 +189,8 @@ void build_bdd(DdNode* f, char* output){
 	for(int i = 0; i < num_out; i++){
 		if(output[i] == '0') // OFF set
 			continue;
+		if(output[i] == '-') // DC set
+			continue;
 		if(output[i] == '1'){	// ON set
 			// computes BDD resulting of the OR of the f product with actual BDD
 			tmpNode = Cudd_bddOr(manager, f, vectorbdd_F[i]); 
@@ -262,6 +264,10 @@ int parse(char* inputfile,  int init_manager) {
 	char* input = (char*)calloc(num_in+1,sizeof(char));
 	char* output = (char*)calloc(num_out+1,sizeof(char));
 	while(fscanf(PLAFile, "%s", tmp) > 0){
+		if(tmp[0] == '.'){
+			fscanf(PLAFile, "%s\n", tmp);
+			continue;
+		}
 		if(strlen(tmp) > num_in + num_out){
 			// tmp contains input and output, separated by a special character
 			char *tmpstr;
